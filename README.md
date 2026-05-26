@@ -20,4 +20,4 @@ pip install -r requirements.txt
 
 ## Goals
 
-Practice professional software engineering workflow.
+Practice brilliant, professional software engineering workflow.
