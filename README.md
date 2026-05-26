@@ -20,4 +20,4 @@ pip install -r requirements.txt
 
 ## Goals
 
-Practice professional software engineering workflow.
+An awsome entereprise repository for stadard AI models.
