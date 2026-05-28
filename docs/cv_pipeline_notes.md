@@ -47,3 +47,27 @@
 ### Tooling Ecosystem
 * **CVAT:** Enterprise-grade open-source video annotation frame-engine optimized for heavy object-tracking and pose datasets.
 * **Roboflow:** Specialized cloud platform aggregating collection, formatting, and augmentation pipelines into a clean development workflow.
+---
+
+## Model Training Mechanics & Evaluation Metrics
+
+### The Training Optimization Loop
+* **Forward Pass:** The architecture processes input arrays to generate bounding box and class coordinate predictions.
+* **Loss Computation:** Algorithmic calculation of error between empirical predictions and human ground truth annotations.
+* **Backward Pass (Backpropagation):** Differentiating the loss function to adjust internal parameters (weights) to minimize error on subsequent iterations.
+
+### Core Variables
+* **Epoch:** A single full training pass across the entire active training dataset distribution.
+* **Batch Size:** Sub-segment data arrays processed concurrently prior to parameter optimization.
+* **Overfitting:** High variance anomaly where the model learns training distribution noise rather than generalized features, resulting in failure on out-of-distribution test items.
+
+### Data Partitioning Strategies
+* **Train Set:** Base data array utilized directly for weight optimization.
+* **Validation Set:** Unseen calibration array used during hyperparameter tuning to monitor generalization capacity.
+* **Test Set:** Pristine, isolated evaluation array held strictly to calculate ultimate production performance benchmarks.
+
+### Matrix Evaluation Analytics
+* **Precision:** True Positives divided by Total Predicted Positives. Quantifies false-positive suppression performance.
+* **Recall:** True Positives divided by Total Actual Ground Truth Positives. Quantifies false-negative suppression performance.
+* **IoU (Intersection over Union):** Spatial overlapping evaluation parameter mapping the intersection area divided by the union area of bounding boxes.
+* **mAP (Mean Average Precision):** The integral mean of precision-recall curves across IoU thresholds. Serves as the primary performance benchmark metric for object detection pipelines.
