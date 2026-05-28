@@ -71,3 +71,27 @@
 * **Recall:** True Positives divided by Total Actual Ground Truth Positives. Quantifies false-negative suppression performance.
 * **IoU (Intersection over Union):** Spatial overlapping evaluation parameter mapping the intersection area divided by the union area of bounding boxes.
 * **mAP (Mean Average Precision):** The integral mean of precision-recall curves across IoU thresholds. Serves as the primary performance benchmark metric for object detection pipelines.
+---
+
+## Production Lifecycle & Core Engineering Glossary
+
+### The End-to-End MLOps Pipeline
+1. **Data Collection:** Curating raw inputs representative of the ultimate deployment domain.
+2. **Annotation:** Establishing structural constraints (bounding boxes, masks, keypoints) as targets.
+3. **Data Splitting:** Protecting model evaluation integrity via structured Train/Val/Test partitioning.
+4. **Training:** Iterative structural weight alignment driven by backpropagation and loss optimization.
+5. **Evaluation:** Verifying out-of-distribution performance using localized confusion matrix analytics.
+6. **Deployment:** Compiling the inference model engine into active execution environments (e.g., local webcam streams).
+7. **Monitoring:** Tracking real-world telemetry to identify accuracy degradation, triggering subsequent data-collection cycles.
+
+### Comprehensive Engineering Glossary
+* **Classification:** Categorizing an entire visual scene into a singular global identity class.
+* **Object Detection:** Simultaneous multi-target localized spatial coordinates tracking using bounding boxes.
+* **Segmentation:** Micro-level pixel-by-pixel categorical isolation mapping precise boundary definitions.
+* **Pose Estimation:** Calculating coordinates mapping explicit topological body joints and structural nodes.
+* **Annotation:** Human-in-the-loop processing mapping ground-truth targets onto raw matrices.
+* **Overfitting:** The extreme optimization variance where a network memorizes training features instead of distilling generalized trends.
+* **Precision:** The mathematical metric evaluating false-positive mitigation performance ($\frac{\text{True Positives}}{\text{Total Predicted Positives}}$).
+* **Recall:** The mathematical metric evaluating false-negative mitigation performance ($\frac{\text{True Positives}}{\text{Total Actual Positives}}$).
+* **IoU (Intersection over Union):** The spatial overlap performance ratio bounding predicted boxes against annotated truths.
+* **Deployment:** Integrating an optimized network matrix into production software layers to perform live inference calculations.
