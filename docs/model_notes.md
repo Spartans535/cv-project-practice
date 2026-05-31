@@ -64,3 +64,15 @@
 ### 2. Operational Stability (Production Constraints)
 * **SLA Latency Targets:** Managing network and compute pipelines to process incoming frame arrays safely within the live camera's native frame-rate budget.
 * **Exception Isolation:** Architecting error-handling wrappers around stream capture routines to tolerate intermittent network drops, dropouts, and hardware signal loss without throwing fatal runtime errors.
+---
+
+## Edge AI Engineering Foundations
+
+### 1. Architectural Paradigms
+* **Cloud Architecture:** Visual data frames are transmitted via networks to centralized server banks. Vulnerable to network latency spikes, data exfiltration risks, and continuous bandwidth overhead costs.
+* **Edge Architecture:** Network execution occurs locally on specialized local hardware components. Ensures zero network-dependent latency, preserves total environment privacy compliance, and achieves standalone offline reliability.
+
+### 2. Edge Optimization Technologies
+* **ONNX Format:** An open-standard serialization framework providing direct model interoperability between diverse development environments and production execution runtimes.
+* **Hardware Acceleration Engines (TensorRT / OpenVINO):** Compilation toolchains that restructure deep-learning graphs to optimize layer execution schedules across dedicated hardware.
+* **Quantization:** A structural compression methodology converting network weight tensors from standard `FP32` precision down to localized `INT8` configurations, reducing memory foot-prints and accelerating execution speeds.
